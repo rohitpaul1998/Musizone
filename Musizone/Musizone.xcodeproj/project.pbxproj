@@ -16,6 +16,14 @@
 		4C2EC1372B9669BA0072DF44 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2EC1362B9669BA0072DF44 /* MainViewController.swift */; };
 		4C2EC13B2B96879E0072DF44 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2EC13A2B96879E0072DF44 /* ArtistViewController.swift */; };
 		4C2EC13F2B96AD360072DF44 /* ArtistScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2EC13E2B96AD360072DF44 /* ArtistScreenView.xib */; };
+		4CDD7A9B2B97E31B007FE982 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD7A9A2B97E31B007FE982 /* Artist.swift */; };
+		4CDD7A9D2B97E393007FE982 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD7A9C2B97E393007FE982 /* Album.swift */; };
+		4CDD7A9F2B97E404007FE982 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD7A9E2B97E404007FE982 /* Song.swift */; };
+		4CDD7AA12B97E460007FE982 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD7AA02B97E460007FE982 /* Genre.swift */; };
+		4CDD7AA62B98070B007FE982 /* DisplayArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD7AA52B98070B007FE982 /* DisplayArtistViewController.swift */; };
+		4CDD7AA82B980A99007FE982 /* DisplayArtistView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CDD7AA72B980A99007FE982 /* DisplayArtistView.xib */; };
+		4CDD7AAA2B9824C3007FE982 /* SearchArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD7AA92B9824C3007FE982 /* SearchArtistViewController.swift */; };
+		4CDD7AAC2B982583007FE982 /* SearchArtistView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CDD7AAB2B982583007FE982 /* SearchArtistView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +38,14 @@
 		4C2EC1362B9669BA0072DF44 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4C2EC13A2B96879E0072DF44 /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
 		4C2EC13E2B96AD360072DF44 /* ArtistScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistScreenView.xib; sourceTree = "<group>"; };
+		4CDD7A9A2B97E31B007FE982 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		4CDD7A9C2B97E393007FE982 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		4CDD7A9E2B97E404007FE982 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		4CDD7AA02B97E460007FE982 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		4CDD7AA52B98070B007FE982 /* DisplayArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayArtistViewController.swift; sourceTree = "<group>"; };
+		4CDD7AA72B980A99007FE982 /* DisplayArtistView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplayArtistView.xib; sourceTree = "<group>"; };
+		4CDD7AA92B9824C3007FE982 /* SearchArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchArtistViewController.swift; sourceTree = "<group>"; };
+		4CDD7AAB2B982583007FE982 /* SearchArtistView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchArtistView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,14 +78,15 @@
 		4C2EC11F2B96565D0072DF44 /* Musizone */ = {
 			isa = PBXGroup;
 			children = (
-				4C2EC1392B9687260072DF44 /* Design */,
+				4CDD7A992B97E2E3007FE982 /* Model */,
+				4CDD7AA22B980213007FE982 /* Views */,
 				4C2EC1382B9686720072DF44 /* View Controllers */,
-				4C2EC1202B96565D0072DF44 /* AppDelegate.swift */,
+				4C2EC1392B9687260072DF44 /* Design */,
 				4C2EC1262B96565D0072DF44 /* Main.storyboard */,
 				4C2EC1292B96565E0072DF44 /* Assets.xcassets */,
 				4C2EC12B2B96565E0072DF44 /* LaunchScreen.storyboard */,
 				4C2EC12E2B96565E0072DF44 /* Info.plist */,
-				4C2EC13E2B96AD360072DF44 /* ArtistScreenView.xib */,
+				4C2EC1202B96565D0072DF44 /* AppDelegate.swift */,
 			);
 			path = Musizone;
 			sourceTree = "<group>";
@@ -80,6 +97,8 @@
 				4C2EC13A2B96879E0072DF44 /* ArtistViewController.swift */,
 				4C2EC1242B96565D0072DF44 /* ViewController.swift */,
 				4C2EC1362B9669BA0072DF44 /* MainViewController.swift */,
+				4CDD7AA52B98070B007FE982 /* DisplayArtistViewController.swift */,
+				4CDD7AA92B9824C3007FE982 /* SearchArtistViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -90,6 +109,27 @@
 				4C2EC1342B9656BA0072DF44 /* MainNib.xib */,
 			);
 			path = Design;
+			sourceTree = "<group>";
+		};
+		4CDD7A992B97E2E3007FE982 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CDD7A9A2B97E31B007FE982 /* Artist.swift */,
+				4CDD7A9C2B97E393007FE982 /* Album.swift */,
+				4CDD7A9E2B97E404007FE982 /* Song.swift */,
+				4CDD7AA02B97E460007FE982 /* Genre.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4CDD7AA22B980213007FE982 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C2EC13E2B96AD360072DF44 /* ArtistScreenView.xib */,
+				4CDD7AA72B980A99007FE982 /* DisplayArtistView.xib */,
+				4CDD7AAB2B982583007FE982 /* SearchArtistView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +192,10 @@
 			files = (
 				4C2EC12D2B96565E0072DF44 /* LaunchScreen.storyboard in Resources */,
 				4C2EC12A2B96565E0072DF44 /* Assets.xcassets in Resources */,
+				4CDD7AAC2B982583007FE982 /* SearchArtistView.xib in Resources */,
 				4C2EC1352B9656BA0072DF44 /* MainNib.xib in Resources */,
 				4C2EC1282B96565D0072DF44 /* Main.storyboard in Resources */,
+				4CDD7AA82B980A99007FE982 /* DisplayArtistView.xib in Resources */,
 				4C2EC13F2B96AD360072DF44 /* ArtistScreenView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,10 +207,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CDD7AAA2B9824C3007FE982 /* SearchArtistViewController.swift in Sources */,
+				4CDD7A9F2B97E404007FE982 /* Song.swift in Sources */,
 				4C2EC1372B9669BA0072DF44 /* MainViewController.swift in Sources */,
 				4C2EC1252B96565D0072DF44 /* ViewController.swift in Sources */,
 				4C2EC1212B96565D0072DF44 /* AppDelegate.swift in Sources */,
+				4CDD7A9B2B97E31B007FE982 /* Artist.swift in Sources */,
+				4CDD7AA62B98070B007FE982 /* DisplayArtistViewController.swift in Sources */,
 				4C2EC13B2B96879E0072DF44 /* ArtistViewController.swift in Sources */,
+				4CDD7A9D2B97E393007FE982 /* Album.swift in Sources */,
+				4CDD7AA12B97E460007FE982 /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
