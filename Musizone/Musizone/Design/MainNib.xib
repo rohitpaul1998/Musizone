@@ -83,6 +83,9 @@
                                 </fragment>
                             </attributedString>
                         </buttonConfiguration>
+                        <connections>
+                            <action selector="onGenreManagerButtonClicked:" destination="7Fb-bU-ODE" eventType="touchUpInside" id="Rk5-fx-xoT"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuS-E5-CPg">
                         <rect key="frame" x="212" y="341" width="156" height="35"/>

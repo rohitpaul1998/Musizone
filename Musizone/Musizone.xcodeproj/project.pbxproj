@@ -16,6 +16,12 @@
 		4C2EC1372B9669BA0072DF44 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2EC1362B9669BA0072DF44 /* MainViewController.swift */; };
 		4C2EC13B2B96879E0072DF44 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2EC13A2B96879E0072DF44 /* ArtistViewController.swift */; };
 		4C2EC13F2B96AD360072DF44 /* ArtistScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2EC13E2B96AD360072DF44 /* ArtistScreenView.xib */; };
+		4CAED8712B9839570048A877 /* GenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAED8702B9839570048A877 /* GenreViewController.swift */; };
+		4CAED8732B983A320048A877 /* GenreScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAED8722B983A320048A877 /* GenreScreenView.xib */; };
+		4CAED8752B984A030048A877 /* DisplayGenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAED8742B984A030048A877 /* DisplayGenreViewController.swift */; };
+		4CAED8772B984AA30048A877 /* DisplayGenreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAED8762B984AA30048A877 /* DisplayGenreView.xib */; };
+		4CAED8792B9852850048A877 /* SearchGenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAED8782B9852850048A877 /* SearchGenreViewController.swift */; };
+		4CAED87B2B98532E0048A877 /* SearchGenreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAED87A2B98532E0048A877 /* SearchGenreView.xib */; };
 		4CDD7A9B2B97E31B007FE982 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD7A9A2B97E31B007FE982 /* Artist.swift */; };
 		4CDD7A9D2B97E393007FE982 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD7A9C2B97E393007FE982 /* Album.swift */; };
 		4CDD7A9F2B97E404007FE982 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD7A9E2B97E404007FE982 /* Song.swift */; };
@@ -38,6 +44,12 @@
 		4C2EC1362B9669BA0072DF44 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4C2EC13A2B96879E0072DF44 /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
 		4C2EC13E2B96AD360072DF44 /* ArtistScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistScreenView.xib; sourceTree = "<group>"; };
+		4CAED8702B9839570048A877 /* GenreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreViewController.swift; sourceTree = "<group>"; };
+		4CAED8722B983A320048A877 /* GenreScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenreScreenView.xib; sourceTree = "<group>"; };
+		4CAED8742B984A030048A877 /* DisplayGenreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayGenreViewController.swift; sourceTree = "<group>"; };
+		4CAED8762B984AA30048A877 /* DisplayGenreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplayGenreView.xib; sourceTree = "<group>"; };
+		4CAED8782B9852850048A877 /* SearchGenreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGenreViewController.swift; sourceTree = "<group>"; };
+		4CAED87A2B98532E0048A877 /* SearchGenreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchGenreView.xib; sourceTree = "<group>"; };
 		4CDD7A9A2B97E31B007FE982 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		4CDD7A9C2B97E393007FE982 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		4CDD7A9E2B97E404007FE982 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
@@ -99,6 +111,9 @@
 				4C2EC1362B9669BA0072DF44 /* MainViewController.swift */,
 				4CDD7AA52B98070B007FE982 /* DisplayArtistViewController.swift */,
 				4CDD7AA92B9824C3007FE982 /* SearchArtistViewController.swift */,
+				4CAED8702B9839570048A877 /* GenreViewController.swift */,
+				4CAED8742B984A030048A877 /* DisplayGenreViewController.swift */,
+				4CAED8782B9852850048A877 /* SearchGenreViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -128,6 +143,9 @@
 				4C2EC13E2B96AD360072DF44 /* ArtistScreenView.xib */,
 				4CDD7AA72B980A99007FE982 /* DisplayArtistView.xib */,
 				4CDD7AAB2B982583007FE982 /* SearchArtistView.xib */,
+				4CAED8722B983A320048A877 /* GenreScreenView.xib */,
+				4CAED8762B984AA30048A877 /* DisplayGenreView.xib */,
+				4CAED87A2B98532E0048A877 /* SearchGenreView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,10 +208,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CAED8732B983A320048A877 /* GenreScreenView.xib in Resources */,
+				4CAED8772B984AA30048A877 /* DisplayGenreView.xib in Resources */,
 				4C2EC12D2B96565E0072DF44 /* LaunchScreen.storyboard in Resources */,
 				4C2EC12A2B96565E0072DF44 /* Assets.xcassets in Resources */,
 				4CDD7AAC2B982583007FE982 /* SearchArtistView.xib in Resources */,
 				4C2EC1352B9656BA0072DF44 /* MainNib.xib in Resources */,
+				4CAED87B2B98532E0048A877 /* SearchGenreView.xib in Resources */,
 				4C2EC1282B96565D0072DF44 /* Main.storyboard in Resources */,
 				4CDD7AA82B980A99007FE982 /* DisplayArtistView.xib in Resources */,
 				4C2EC13F2B96AD360072DF44 /* ArtistScreenView.xib in Resources */,
@@ -212,7 +233,10 @@
 				4C2EC1372B9669BA0072DF44 /* MainViewController.swift in Sources */,
 				4C2EC1252B96565D0072DF44 /* ViewController.swift in Sources */,
 				4C2EC1212B96565D0072DF44 /* AppDelegate.swift in Sources */,
+				4CAED8712B9839570048A877 /* GenreViewController.swift in Sources */,
+				4CAED8752B984A030048A877 /* DisplayGenreViewController.swift in Sources */,
 				4CDD7A9B2B97E31B007FE982 /* Artist.swift in Sources */,
+				4CAED8792B9852850048A877 /* SearchGenreViewController.swift in Sources */,
 				4CDD7AA62B98070B007FE982 /* DisplayArtistViewController.swift in Sources */,
 				4C2EC13B2B96879E0072DF44 /* ArtistViewController.swift in Sources */,
 				4CDD7A9D2B97E393007FE982 /* Album.swift in Sources */,

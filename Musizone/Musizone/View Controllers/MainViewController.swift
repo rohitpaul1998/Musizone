@@ -21,9 +21,18 @@ class MainViewController: UIViewController {
         
         let artistManagerVC = ArtistViewController(nibName: "ArtistScreenView", bundle: nil)
         artistManagerVC.modalPresentationStyle = .fullScreen
-//        artistManagerVC.modalTransitionStyle = .
+        //        artistManagerVC.modalTransitionStyle = .
         self.present(artistManagerVC, animated: true, completion: nil)
         
     }
+    
+    @IBAction func onGenreManagerButtonClicked(_ sender: UIButton) {
+        
+        let genreManagerVC = GenreViewController(nibName: "GenreScreenView", bundle: nil)
+        genreManagerVC.modalPresentationStyle = .fullScreen
+        self.present(genreManagerVC, animated: true, completion: nil)
+        
+    }
+    
     
 }

@@ -128,12 +128,12 @@ class ArtistViewController: UIViewController {
 
     }
     
-    // Helper function to check if an artist is associated with any albums
+    //  function to check if an artist is associated with any albums
     func isArtistAssociatedWithAlbums(artistId: Int) -> Bool {
         return albums.contains(where: { $0.artistId == artistId })
     }
 
-    // Helper function to check if an artist is associated with any songs
+    //  function to check if an artist is associated with any songs
     func isArtistAssociatedWithSongs(artistId: Int) -> Bool {
         return songs.contains(where: { $0.artistId == artistId })
     }
