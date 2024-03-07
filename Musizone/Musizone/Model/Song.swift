@@ -14,5 +14,4 @@ struct Song {
     var genreId: Int
     var title: String
     var duration: Double
-    var favorite: Bool
 }

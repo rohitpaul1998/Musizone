@@ -11,8 +11,6 @@ class DisplayGenreViewController: UIViewController {
 
     @IBOutlet weak var genreDetailsScreenLabel: UILabel!
     
-    var genres: [Genre] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         displayGenreDetails()
@@ -21,17 +19,15 @@ class DisplayGenreViewController: UIViewController {
     
     func displayGenreDetails() {
         var yPosition: CGFloat = 200
-        for genre in genres {
+        for genre in DataMaster.shared.genres {
             let genreDetailsLabel = UILabel()
             genreDetailsLabel.textColor = .white
             genreDetailsLabel.numberOfLines = 0
             genreDetailsLabel.text = "Genre ID: \(genre.id) | Genre Name: \(genre.name)"
             
-            // Set the frame for the label
             genreDetailsLabel.frame = CGRect(x: 60, y: yPosition, width: view.frame.width - 40, height: 50)
-            yPosition += 20 // Adjust the vertical spacing between labels
-            
-            // Add the label to the view
+            yPosition += 20 
+
             view.addSubview(genreDetailsLabel)
         }
     }
@@ -43,7 +39,7 @@ class DisplayGenreViewController: UIViewController {
     @IBAction func onSearchGenreButtonClicked(_ sender: UIButton) {
         let searchGenreVC = SearchGenreViewController(nibName: "SearchGenreView", bundle: nil)
         searchGenreVC.modalPresentationStyle = .fullScreen
-        searchGenreVC.allGenres = genres
+        searchGenreVC.allGenres = DataMaster.shared.genres
         self.present(searchGenreVC, animated: true, completion: nil)
     }
     

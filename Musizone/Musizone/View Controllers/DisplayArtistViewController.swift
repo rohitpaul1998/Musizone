@@ -10,7 +10,6 @@ import UIKit
 class DisplayArtistViewController: UIViewController {
     
     @IBOutlet weak var artistDetailsScreenLabel: UILabel!
-    var artists: [Artist] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,17 +20,17 @@ class DisplayArtistViewController: UIViewController {
     
     func displayArtistDetails() {
         var yPosition: CGFloat = 200
-        for artist in artists {
+        for artist in DataMaster.shared.artists {
             let artistDetailsLabel = UILabel()
             artistDetailsLabel.textColor = .white
             artistDetailsLabel.numberOfLines = 0
             artistDetailsLabel.text = "Artist ID: \(artist.id) | Artist Name: \(artist.name)"
             
-            // Set the frame for the label
+            // sets the frame for the label
             artistDetailsLabel.frame = CGRect(x: 60, y: yPosition, width: view.frame.width - 40, height: 50)
-            yPosition += 20 // Adjust the vertical spacing between labels
+            yPosition += 20 // adjust vertical space b/w labels
             
-            // Add the label to the view
+            // pushes label to the view
             view.addSubview(artistDetailsLabel)
         }
     }
@@ -44,7 +43,7 @@ class DisplayArtistViewController: UIViewController {
     @IBAction func onSearchArtistButtonClicked(_ sender: UIButton) {
         let searchArtistVC = SearchArtistViewController()
         searchArtistVC.modalPresentationStyle = .fullScreen
-        searchArtistVC.allArtists = artists
+        searchArtistVC.allArtists = DataMaster.shared.artists
         self.present(searchArtistVC, animated: true, completion: nil)
     }
     

@@ -25,20 +25,18 @@ class SearchGenreViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        // Filter artists based on the entered text
+        // queries artists based on the entered text
         let filteredGenres = allGenres.filter { $0.name.lowercased().contains(searchText.lowercased()) }
         
-        // Update the UITextView with artist details
+        // modifies UITextView with artist details
         updateTextView(with: filteredGenres.first)
     }
     
     func updateTextView(with genre: Genre?) {
         if let genre = genre {
-            // Display artist details in the UITextView
             let genreDetails = "\(genre.name)"
             searchResultTextView.text = genreDetails
         } else {
-            // Clear the UITextView if no artist is found
             searchResultTextView.text = ""
         }
     }

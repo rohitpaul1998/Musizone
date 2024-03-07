@@ -68,6 +68,9 @@
                                 </fragment>
                             </attributedString>
                         </buttonConfiguration>
+                        <connections>
+                            <action selector="onSongManagerButtonClicked:" destination="7Fb-bU-ODE" eventType="touchUpInside" id="oiT-YN-wWY"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOv-j2-1IY">
                         <rect key="frame" x="212" y="449" width="156" height="35"/>
@@ -101,6 +104,9 @@
                                 </fragment>
                             </attributedString>
                         </buttonConfiguration>
+                        <connections>
+                            <action selector="onAlbumManagerButtonClicked:" destination="7Fb-bU-ODE" eventType="touchUpInside" id="Xkb-nn-ZmI"/>
+                        </connections>
                     </button>
                 </subviews>
                 <viewLayoutGuide key="safeArea" id="hzR-Ys-7JE"/>

@@ -10,9 +10,16 @@ import UIKit
 class ArtistViewController: UIViewController {
     
     // referencing models and creating arrays for data persistence
-    var artists: [Artist] = []
-    var albums: [Album] = []
-    var songs: [Song] = []
+    var artists: [Artist] {
+        get { DataMaster.shared.artists }
+        set { DataMaster.shared.artists = newValue }
+    }
+    
+    var albums: [Album] {
+        get { DataMaster.shared.albums }
+        set { DataMaster.shared.albums = newValue }
+    }
+    
 
     @IBOutlet weak var artistIDTextField: UITextField!
     @IBOutlet weak var artistNameTextField: UITextField!
@@ -30,7 +37,8 @@ class ArtistViewController: UIViewController {
     
     // implementing the add functionality for artist creation
     @IBAction func onAddArtistButtonClicked(_ sender: UIButton) {
-        guard let idString = artistIDTextField.text, let name = artistNameTextField.text,
+        guard let idString = artistIDTextField.text,
+              let name = artistNameTextField.text,
               let id = Int(idString), !name.isEmpty else {
             showAlert(title: "Error", message: "Please enter valid artist ID and name.")
             return
@@ -106,10 +114,10 @@ class ArtistViewController: UIViewController {
         // action sheet with artists
         for artist in artists {
             let action = UIAlertAction(title: "\(artist.name)", style: .default) { _ in
-                // checking if the artist is associated with any albums or songs
-                if self.isArtistAssociatedWithAlbums(artistId: artist.id) || self.isArtistAssociatedWithSongs(artistId: artist.id) {
+                // checking if the artist is associated with any albums
+                if self.isArtistAssociatedWithAlbums(artistId: artist.id) {
                     // displaying an error popup asking the user to delete associated albums or songs first
-                    self.showAlert(title: "Error", message: "Cannot delete artist with associated albums or songs. Please delete the albums/songs first.")
+                    self.showAlert(title: "Error", message: "Cannot delete artist with associated albums. Please delete the albums first.")
                 } else {
                     // proceeds to delete the artist
                     if let index = self.artists.firstIndex(where: { $0.id == artist.id }) {
@@ -132,11 +140,6 @@ class ArtistViewController: UIViewController {
     func isArtistAssociatedWithAlbums(artistId: Int) -> Bool {
         return albums.contains(where: { $0.artistId == artistId })
     }
-
-    //  function to check if an artist is associated with any songs
-    func isArtistAssociatedWithSongs(artistId: Int) -> Bool {
-        return songs.contains(where: { $0.artistId == artistId })
-    }
     
     // alert function to display alerts
     func showAlert(title: String, message: String) {
@@ -151,7 +154,6 @@ class ArtistViewController: UIViewController {
     @IBAction func onDisplayArtistButtonClicked(_ sender: UIButton) {
         let displayArtistVC = DisplayArtistViewController(nibName: "DisplayArtistView", bundle: nil)
         displayArtistVC.modalPresentationStyle = .fullScreen
-        displayArtistVC.artists = artists
         self.present(displayArtistVC, animated: true, completion: nil)
     }
     

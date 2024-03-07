@@ -13,8 +13,15 @@ class GenreViewController: UIViewController {
     @IBOutlet weak var genreIdTextField: UITextField!
     @IBOutlet weak var genreNameTextField: UITextField!
     
-    var genres: [Genre] = []
-    let songs: [Song] = []
+    var genres: [Genre] {
+        get { DataMaster.shared.genres }
+        set { DataMaster.shared.genres = newValue }
+    }
+    
+    var songs: [Song] {
+        get { DataMaster.shared.songs }
+        set { DataMaster.shared.songs = newValue }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +50,7 @@ class GenreViewController: UIViewController {
         genreIdTextField.text = ""
         genreNameTextField.text = ""
 
-        showAlert(title: "Success", message: "Artist added successfully.")
+        showAlert(title: "Success", message: "Genre added successfully.")
     }
     
     @IBAction func onUpdateGenreButtonClicked(_ sender: UIButton) {
@@ -83,7 +90,7 @@ class GenreViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         actionSheet.addAction(cancelAction)
         
-        // Present the action sheet
+        // presents action sheet
         self.present(actionSheet, animated: true, completion: nil)
     }
     
@@ -123,7 +130,6 @@ class GenreViewController: UIViewController {
     @IBAction func onDisplayGenreButtonClicked(_ sender: UIButton) {
         let displayGenreVC = DisplayGenreViewController(nibName: "DisplayGenreView", bundle: nil)
         displayGenreVC.modalPresentationStyle = .fullScreen
-        displayGenreVC.genres = genres
         self.present(displayGenreVC, animated: true, completion: nil)
     }
     

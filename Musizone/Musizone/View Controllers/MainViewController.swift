@@ -34,5 +34,21 @@ class MainViewController: UIViewController {
         
     }
     
+    @IBAction func onAlbumManagerButtonClicked(_ sender: UIButton) {
+        
+        let albumManagerVC = AlbumViewController(nibName: "AlbumScreenView", bundle: nil)
+        albumManagerVC.modalPresentationStyle = .fullScreen
+        self.present(albumManagerVC, animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func onSongManagerButtonClicked(_ sender: UIButton) {
+        
+        let songManagerVC = SongViewController(nibName: "SongScreenView", bundle: nil)
+        songManagerVC.modalPresentationStyle = .fullScreen
+        self.present(songManagerVC, animated: true, completion: nil)
+        
+    }
+    
     
 }

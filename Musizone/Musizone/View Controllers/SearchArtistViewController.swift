@@ -28,17 +28,17 @@ class SearchArtistViewController: UIViewController, UISearchBarDelegate {
             // Filter artists based on the entered text
             let filteredArtists = allArtists.filter { $0.name.lowercased().contains(searchText.lowercased()) }
             
-            // Update the UITextView with artist details
+            // Modifies UITextView with artist details
             updateTextView(with: filteredArtists.first)
         }
     
     func updateTextView(with artist: Artist?) {
             if let artist = artist {
-                // Display artist details in the UITextView
+                // shows artist details in the UITextView
                 let artistDetails = "\(artist.name)"
                 searchResultTextView.text = artistDetails
             } else {
-                // Clear the UITextView if no artist is found
+                // clears UITextView if no artist is found
                 searchResultTextView.text = ""
             }
         }
